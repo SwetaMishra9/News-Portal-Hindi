@@ -1,0 +1,59 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="https://www.google.com/jsapi?key=YourKeyHere">
+    </script>
+    <script language="javascript" type="text/javascript">
+        google.load("elements", "1", {
+            packages: "transliteration"
+        });
+ 
+        function onLoad() {
+            var options = {
+                sourceLanguage: google.elements.transliteration.LanguageCode.ENGLISH,
+                destinationLanguage: google.elements.transliteration.LanguageCode.HINDI, // available option English, Bengali, Marathi, Malayalam etc.
+                shortcutKey: 'ctrl+g',
+                transliterationEnabled: true
+            };
+ 
+            var control = new google.elements.transliteration.TransliterationControl(options);
+            control.makeTransliteratable(['txtHindiContent']);
+        }
+        google.setOnLoadCallback(onLoad);
+ 
+    </script>
+ 
+</head>
+
+<body>
+<h3>How to save and fetch data into/from sql server database in other language(hindi, bengali, malayalam etc)</h3>
+    <table>
+        <tr>
+            <td>Type in Hindi : </td>
+            <td>
+            <textarea id="txtHindiContent" cols="39" rows="10"></textarea>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                </td>
+            <td><input type="submit" id="btnSave"  value="Save" OnClick="btnSave_Click" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+              
+            </td>
+        </tr>
+    </table>
+   
+
+
+
+</body>
+</html>
